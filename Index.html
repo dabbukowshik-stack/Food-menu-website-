@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Site</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Navbar {
+    background-color: cornflowerblue;
+    padding: 15px;
+}
+
+.container {
+    max-width: 1100;
+    padding: 20px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    font-style: inherit;
+    justify-content: space-between;
+}
+
+.nav-link {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link li a:hover {
+    color: #222;
+}
+
+.home {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0,6), rgba(0,0,0,0,6),
+    url("/media/Kolkata-biryani.webp"));
+    background-size: cover;
+    padding: 80px;
+    background-position: center;
+    align-items: center;
+}
+
+.home .container {
+    text-align: left;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.home h2 {
+    text-align: left;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.home h2 span {
+    color: #ffb703;
+}
+
+.home p {
+    font-size: 18px;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+    color:black;
+}
+
+.home .btn {
+    padding: 15px 36px;
+    background-color: #ffb703;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.home.btn:hover {
+    background-color: #ff9f00;
+    transform: scale(1.05);
+}
+
+.FoodMenu {
+    padding: 60px;
+    background-color: #f7f7f7;
+}
+
+.FoodMenu .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.FoodMenu .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px, 15px, rgba(0,0,0,0,1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+    
+}
+
+.FoodMenu .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0,2);
+}
+
+.FoodMenu .card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.FoodMenu .card img {
+    width: 100px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.Food .card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contact {
+    min-height: 70vh;
+    background-color: #f4f6f8;
+    padding: 80px 0;
+}
+
+.contact .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact h2 {
+    font-size: 32px;
+}
+
+.contact p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: cornflowerblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="Navbar">
+        <div class="container">
+            <h1 class="logo">FoodHub</h1>
+            <ul class="nav-link">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#FoodMenu">Food Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home" class="home">
+        <div class="container">
+            <h2>Delicious Food...<span>Delivered Fresh</span></h2> <br> <br>
+            <p>Order your favorite meals anytime. Fresh ingrediants, bold flavors and fast delivery straight to your doorstep.</p> 
+            <br>  <br>
+            <a href="#FoodMenu" class="btn">View Menu</a>
+        </div>
+    </section>
+    <section id="FoodMenu" class="FoodMenu">
+        <div class="container">
+            <div class="card">
+                <h2>Chicken Roll</h2>
+                <img src="/media/roll.jpeg" alt="">
+                <p>Spicy chicken wrapped in a soft roll with fresh veggies and sauces.</p>
+            </div>
+            <div class="card">
+                <h2>Biriyani</h2>
+                <img src="/media/hydbir.jpeg" alt="" width="250px" height="200px">
+                <p>Fragrant basmati rice cooked with tender meat, rich spices, and slow-cooked for deep traditional flavor.</p>
+            </div>
+            <div class="card">
+                <h2>Fried rice</h2>
+                <img src="/media/firedrice.jpeg" alt="">
+                <p>Wok-tossed rice with fresh vegetables, sauces, and spices for a light yet satisfying meals.</p>
+            </div>
+            <div class="card">
+                <h2>Chicken Curry</h2>
+                <img src="/media/chickencurry.jpeg" alt="">
+                <p>Juicy chicken simmered in a spicy, aromatic gravy made with onions, tomatoes, and Indian masalas.</p>
+            </div>
+            <div class="card">
+                <h2>Mutton fry</h2>
+                <img src="/media/muttonfry.jpeg" alt="">
+                <p>Slow-roasted mutton pieces coated in bold spices, delivering a rich and intense taste.</p>
+            </div>
+            <div class="card">
+                <h2>Burger Combo</h2>
+                <img src="/media/burgercom.jpeg" alt="">
+                <p>A classic burger served with crispy fries and a chilled drink for a complete fast-food combo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions about our menu, orders, or delivery? Reach out to us anytime - we're happy to help.</p>
+            <a href="dabbukowshik@gmail.com" class="btn">Email Us</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <strong>FoodHub</strong></p>
+        <p>Fresh food • Fast delivery</p>
+        <p>© 2026 FoodHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
